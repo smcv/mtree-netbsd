@@ -1,4 +1,4 @@
-/*	$NetBSD: verify.c,v 1.1 2003/03/31 08:51:13 grant Exp $	*/
+/*	$NetBSD: verify.c,v 1.1.1.1 2003/03/31 08:51:13 grant Exp $	*/
 
 /*-
  * Copyright (c) 1990, 1993
@@ -43,7 +43,7 @@
 #if 0
 static char sccsid[] = "@(#)verify.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: verify.c,v 1.1 2003/03/31 08:51:13 grant Exp $");
+__RCSID("$NetBSD: verify.c,v 1.1.1.1 2003/03/31 08:51:13 grant Exp $");
 #endif
 #endif /* not lint */
 

@@ -1,4 +1,4 @@
-/*	$NetBSD: excludes.c,v 1.1 2003/03/31 08:51:11 grant Exp $	*/
+/*	$NetBSD: excludes.c,v 1.1.1.1 2003/03/31 08:51:11 grant Exp $	*/
 
 /*
  * Copyright 2000 Massachusetts Institute of Technology
@@ -36,7 +36,7 @@
 #endif
 
 #if defined(__RCSID) && !defined(lint)
-__RCSID("$NetBSD: excludes.c,v 1.1 2003/03/31 08:51:11 grant Exp $");
+__RCSID("$NetBSD: excludes.c,v 1.1.1.1 2003/03/31 08:51:11 grant Exp $");
 #endif
 
 #include <sys/types.h>

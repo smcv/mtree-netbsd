@@ -1,4 +1,4 @@
-/*	$NetBSD: create.c,v 1.1 2003/03/31 08:51:10 grant Exp $	*/
+/*	$NetBSD: create.c,v 1.1.1.1 2003/03/31 08:51:10 grant Exp $	*/
 
 /*-
  * Copyright (c) 1989, 1993
@@ -43,7 +43,7 @@
 #if 0
 static char sccsid[] = "@(#)create.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: create.c,v 1.1 2003/03/31 08:51:10 grant Exp $");
+__RCSID("$NetBSD: create.c,v 1.1.1.1 2003/03/31 08:51:10 grant Exp $");
 #endif
 #endif /* not lint */
 
