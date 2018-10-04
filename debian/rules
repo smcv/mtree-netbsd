@@ -23,8 +23,10 @@
 #override_dh_auto_configure:
 #	dh_auto_configure -- #	-DCMAKE_LIBRARY_PATH=$(DEB_HOST_MULTIARCH)
 
+# Install this in /usr/bin
+
 override_dh_auto_configure:
-	dh_auto_configure -- LIBS="-lnbcompat"
+	dh_auto_configure -- --sbindir=/usr/bin LIBS="-lnbcompat"
 
 # No tests
 override_dh_auto_test:
