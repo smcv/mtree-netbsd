@@ -28,6 +28,9 @@
 override_dh_auto_configure:
 	dh_auto_configure -- --sbindir=/usr/bin LIBS="-lnbcompat"
 
-# No tests
+MTREE_KEYWORDS := cksum,md5digest,sha1digest,sha256digest,rmd160,nlink
+
+# Add tests
 override_dh_auto_test:
-	true
+	fmtree -c -K $(MTREE_KEYWORDS) | ./mtree
+	./mtree -c -K $(MTREE_KEYWORDS) | fmtree
