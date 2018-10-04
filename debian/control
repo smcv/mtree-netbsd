@@ -1,15 +1,24 @@
 Source: mtree-netbsd
-Section: unknown
+Section: utils
 Priority: optional
 Maintainer: John Goerzen <jgoerzen@complete.org>
-Build-Depends: debhelper (>= 9), autotools-dev
+Build-Depends: debhelper (>= 9), autotools-dev, bmake, libnbcompat-dev
 Standards-Version: 3.9.8
-Homepage: <insert the upstream URL, if relevant>
-#Vcs-Git: https://anonscm.debian.org/collab-maint/mtree-netbsd.git
-#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/mtree-netbsd.git
+Homepage: http://cdn.netbsd.org/pub/pkgsrc/current/pkgsrc/pkgtools/mtree/README.html
+Vcs-Git: https://github.com/jgoerzen/mtree-netbsd.git
+Vcs-Browser: https://github.com/jgoerzen/mtree-netbsd
 
 Package: mtree-netbsd
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Description: Validates directory tree against specification
+ The mtree utility compares a file hierarchy against a specification,
+ creates a specification for a file hierarchy, or modifies a specification.
+ This specification can be controlled by the user, but typically includes
+ file/directory/symlink names, ownership information, permission bits, and
+ so forth.  It may optionally also include various hashes, such as SHA-256
+ or MD5.
+ .
+ This mtree utility can understand its own files, as well as those generated
+ by the FreeBSD mtree (in Debian as fmtree in freebsd-buildutils and
+ freebsd-glue) and bsdtar/libarchive.

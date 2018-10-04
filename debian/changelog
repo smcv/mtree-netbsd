@@ -1,5 +1,5 @@
 mtree-netbsd (20180822-1) unstable; urgency=medium
 
-  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+  * Initial release (Closes: #910253)  <nnnn is the bug number of your ITP>
 
  -- John Goerzen <jgoerzen@complete.org>  Wed, 03 Oct 2018 21:49:57 -0500
