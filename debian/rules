@@ -25,19 +25,10 @@
 
 # Install this in /usr/bin
 
-override_dh_auto_clean:
-	rm -f nbcompat.h nbcompat
-	dh_auto_clean
-
 override_dh_auto_configure:
-	dh_auto_configure -- --sbindir=/usr/bin CFLAGS="$(CFLAGS) -I/usr/include/md " LIBS="-lbsd -lmd"
+	dh_auto_configure -- --sbindir=/usr/bin LIBS="-lnbcompat"
 
 MTREE_KEYWORDS := cksum,md5digest,sha1digest,sha256digest,rmd160,nlink,gname,uname
-
-override_dh_auto_build:
-	touch nbcompat.h
-	ln -s /usr/include/md nbcompat
-	dh_auto_build
 
 # Add tests
 override_dh_auto_test:
