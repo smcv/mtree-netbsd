@@ -58,6 +58,9 @@ __RCSID("$NetBSD: pack_dev.c,v 1.5 2008/11/06 02:14:52 jschauma Exp $");
 #include <sys/stat.h>
 #endif
 
+/* Linux libc has these here */
+#include <sys/sysmacros.h>
+
 #if HAVE_LIMITS_H
 #include <limits.h>
 #endif
