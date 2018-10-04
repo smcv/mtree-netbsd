@@ -1,3 +1,11 @@
+mtree-netbsd (20180822-2) unstable; urgency=medium
+
+  * Adding tests, verifying compatibility with FreeBSD fmtree from
+    freebsd-buildutils
+  * Added sub-second time precision
+
+ -- John Goerzen <jgoerzen@complete.org>  Thu, 04 Oct 2018 08:40:30 -0500
+
 mtree-netbsd (20180822-1) unstable; urgency=medium
 
   * Initial release (Closes: #910253)  <nnnn is the bug number of your ITP>
