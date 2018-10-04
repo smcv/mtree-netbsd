@@ -1,0 +1,16 @@
+mtree-netbsd for Debian
+----------------------
+
+This is the mtree package derived from the NetBSD source tree.
+
+Related packages in Debian include:
+
+ - freebsd-buildutils and freebsd-glue, which provide FreeBSD's legacy fmtree.
+ - bsdtar (and libarchive), which can generate and process files using the
+   mtree -C format.
+
+There is also a document describing the mtree format in the bsdtar
+package as the mtree(5) manpage.
+
+ -- John Goerzen <jgoerzen@complete.org>  Wed, 03 Oct 2018 21:49:57 -0500
+

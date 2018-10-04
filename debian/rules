@@ -35,4 +35,5 @@ MTREE_KEYWORDS := cksum,md5digest,sha1digest,sha256digest,rmd160,nlink,gname,una
 override_dh_auto_test:
 	fmtree -c -K $(MTREE_KEYWORDS) | ./mtree
 	./mtree -c -K $(MTREE_KEYWORDS) | sed -e 's/\(md5\|sha1\|sha256\|sha384\|sha512\)=/\1digest=/' -e 's/rmd160=/ripemd160digest=/' | fmtree
+	bsdtar -cf - --options 'mtree:uname,gname,md5,sha1,sha256,sha384,sha512,device,flags,gid,link,mode,nlink,size,time,uid,type,uname' --format mtree . | ./mtree
 	./mtree -c -K $(MTREE_KEYWORDS) | ./mtree -C -K $(MTREE_KEYWORDS) |  grep md5= | grep sha1= | grep sha256= | grep gname= | grep -q uname=
