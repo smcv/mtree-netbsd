@@ -25,8 +25,9 @@
 
 # Install this in /usr/bin
 
+# The -DBSD4_4 and -Dst_mtimespec=st_mtim are for sub-second time precision
 override_dh_auto_configure:
-	dh_auto_configure -- --sbindir=/usr/bin LIBS="-lnbcompat"
+	dh_auto_configure -- --sbindir=/usr/bin LIBS="-lnbcompat" CPPFLAGS="$(CPPFLAGS) -D_GNU_SOURCE -DBSD4_4 -Dst_mtimespec=st_mtim"
 
 MTREE_KEYWORDS := cksum,md5digest,sha1digest,sha256digest,rmd160,nlink,gname,uname
 
@@ -34,4 +35,4 @@ MTREE_KEYWORDS := cksum,md5digest,sha1digest,sha256digest,rmd160,nlink,gname,una
 override_dh_auto_test:
 	fmtree -c -K $(MTREE_KEYWORDS) | ./mtree
 	./mtree -c -K $(MTREE_KEYWORDS) | sed -e 's/\(md5\|sha1\|sha256\|sha384\|sha512\)=/\1digest=/' -e 's/rmd160=/ripemd160digest=/' | fmtree
-	./mtree -c -K $(MTREE_KEYWORDS) | grep md5= | grep sha1= | grep sha256= | grep gname= | grep uname=
+	./mtree -c -K $(MTREE_KEYWORDS) | ./mtree -C -K $(MTREE_KEYWORDS) |  grep md5= | grep sha1= | grep sha256= | grep gname= | grep -q uname=
