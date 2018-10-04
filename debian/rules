@@ -28,9 +28,10 @@
 override_dh_auto_configure:
 	dh_auto_configure -- --sbindir=/usr/bin LIBS="-lnbcompat"
 
-MTREE_KEYWORDS := cksum,md5digest,sha1digest,sha256digest,rmd160,nlink
+MTREE_KEYWORDS := cksum,md5digest,sha1digest,sha256digest,rmd160,nlink,gname,uname
 
 # Add tests
 override_dh_auto_test:
 	fmtree -c -K $(MTREE_KEYWORDS) | ./mtree
-	./mtree -c -K $(MTREE_KEYWORDS) | fmtree
+	./mtree -c -K $(MTREE_KEYWORDS) | sed -e 's/\(md5\|sha1\|sha256\|sha384\|sha512\)=/\1digest=/' -e 's/rmd160=/ripemd160digest=/' | fmtree
+	./mtree -c -K $(MTREE_KEYWORDS) | grep md5= | grep sha1= | grep sha256= | grep gname= | grep uname=
