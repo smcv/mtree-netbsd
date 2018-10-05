@@ -1,3 +1,10 @@
+mtree-netbsd (20180822-3) unstable; urgency=low
+
+  * Harmonize build-dep with libnbcompat
+  * Correct debian/copyright.  Closes: #910332.
+
+ -- John Goerzen <jgoerzen@complete.org>  Fri, 05 Oct 2018 07:50:43 -0500
+
 mtree-netbsd (20180822-2) unstable; urgency=medium
 
   * Adding tests, verifying compatibility with FreeBSD fmtree from
