@@ -27,7 +27,7 @@
 
 # The -DBSD4_4 and -Dst_mtimespec=st_mtim are for sub-second time precision
 override_dh_auto_configure:
-	dh_auto_configure -- --sbindir=/usr/bin LIBS="-lnbcompat -lbsd -lmd" CPPFLAGS="$(CPPFLAGS) -D_GNU_SOURCE -DBSD4_4 -Dst_mtimespec=st_mtim"
+	dh_auto_configure -- --sbindir=/usr/bin LIBS="-lnbcompat -lmd" CPPFLAGS="$(CPPFLAGS) -D_GNU_SOURCE -DBSD4_4 -Dst_mtimespec=st_mtim"
 
 MTREE_KEYWORDS := cksum,md5digest,sha1digest,sha256digest,rmd160,nlink,gname,uname
 
