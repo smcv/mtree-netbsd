@@ -1,3 +1,9 @@
+mtree-netbsd (20180822-4) unstable; urgency=medium
+
+  * Coordinate with libnbcompat-dev v4 libraries
+
+ -- John Goerzen <jgoerzen@complete.org>  Fri, 05 Oct 2018 08:44:49 -0500
+
 mtree-netbsd (20180822-3) unstable; urgency=low
 
   * Harmonize build-dep with libnbcompat
