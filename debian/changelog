@@ -1,3 +1,10 @@
+mtree-netbsd (20180822-5) UNRELEASED; urgency=medium
+
+  * Update build-dep to support libarchive-tools instead of bsdtar.
+    Closes: #945890.
+
+ -- John Goerzen <jgoerzen@complete.org>  Sun, 08 Dec 2019 09:40:24 -0600
+
 mtree-netbsd (20180822-4) unstable; urgency=low
 
   * Coordinate with libnbcompat-dev v5 libraries
