@@ -1,4 +1,4 @@
-mtree-netbsd (20180822-5) UNRELEASED; urgency=medium
+mtree-netbsd (20180822-5) unstable; urgency=medium
 
   * Update build-dep to support libarchive-tools instead of bsdtar.
     Closes: #945890.
