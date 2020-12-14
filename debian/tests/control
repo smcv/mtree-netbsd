@@ -3,7 +3,7 @@ Restrictions: superficial
 
 Tests: vs-freebsd
 Depends: @, freebsd-buildutils
-Restrictions: superficial
+Restrictions: skip-not-installable, superficial
 
 Tests: vs-libarchive
 Depends: @, libarchive-tools | bsdtar

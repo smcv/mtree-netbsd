@@ -31,6 +31,8 @@ override_dh_auto_configure:
 
 # Add tests
 override_dh_auto_test:
-	MTREE=./mtree ./debian/tests/vs-freebsd
+	if command -v fmtree >/dev/null; then \
+		MTREE=./mtree ./debian/tests/vs-freebsd; \
+	fi
 	MTREE=./mtree ./debian/tests/vs-libarchive
 	MTREE=./mtree ./debian/tests/self
