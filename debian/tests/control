@@ -1,0 +1,10 @@
+Tests: self
+Restrictions: superficial
+
+Tests: vs-freebsd
+Depends: @, freebsd-buildutils
+Restrictions: superficial
+
+Tests: vs-libarchive
+Depends: @, libarchive-tools | bsdtar
+Restrictions: superficial

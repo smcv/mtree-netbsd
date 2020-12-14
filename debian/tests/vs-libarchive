@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -eu
+set -o pipefail
+
+. debian/tests/common.sh
+
+bsdtar -cf - --options 'mtree:uname,gname,md5,sha1,sha256,sha384,sha512,device,flags,gid,link,mode,nlink,size,time,uid,type,uname' --format mtree . | "${MTREE}"
+
+# vim:set ft=sh:

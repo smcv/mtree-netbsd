@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -eu
+set -o pipefail
+
+. debian/tests/common.sh
+
+fmtree -c -K "${MTREE_KEYWORDS}" | "${MTREE}"
+"${MTREE}" -c -K "${MTREE_KEYWORDS}" | sed -e 's/\(md5\|sha1\|sha256\|sha384\|sha512\)=/\1digest=/' -e 's/rmd160=/ripemd160digest=/' | fmtree
+
+# vim:set ft=sh:
